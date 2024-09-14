@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
+import Footer from "./components/footer"
 const API_KEY = import.meta.env.VITE_API_KEY
 
 
@@ -28,9 +29,8 @@ function App() {
 
     return (
         <>
-            <h1>{result.title}</h1>
-            <p>{result.date}</p>
             <img src={result.imgUrl} alt="" />
+            <Footer title={result.title} date={result.date} />
         </>
     )
 }
